@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import { ConnectMongoDb } from "./Utils/mongodb.js";
 import URLRoute from "./Routes/urls.js";
 import dns from "dns/promises"
+import mongoose from "mongoose";
 
 dns.setServers(["1.1.1.1","8.8.8.8"])
 
