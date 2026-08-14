@@ -1,12 +1,14 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import dns from "node:dns/promises";
+
 import { ConnectMongoDb } from "./Utils/mongodb.js";
 import URLRoute from "./Routes/urls.js";
 
 dotenv.config();
-import dns from "node:dns/promises";
-dns.setServers(["1.1.1.1", "8.8.8.8"]);
+
+dns.setServers(["8.8.8.8"]);
 
 const app = express();
 
